@@ -1,4 +1,4 @@
-package com.premierleauge.premierleague;
+package com.premierleague.premierleague;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

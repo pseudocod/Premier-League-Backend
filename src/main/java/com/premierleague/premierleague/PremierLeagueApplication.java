@@ -1,13 +1,13 @@
-package com.premierleauge.premierleague;
+package com.premierleague.premierleague;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PremierleagueApplication {
+public class PremierLeagueApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PremierleagueApplication.class, args);
+		SpringApplication.run(PremierLeagueApplication.class, args);
 	}
 
 }
