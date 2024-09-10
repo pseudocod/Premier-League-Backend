@@ -10,6 +10,7 @@ import com.premierleague.premierleague.domain.entity.player.PlayerStats;
 import com.premierleague.premierleague.domain.entity.team.Team;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.Named;
 import org.mapstruct.factory.Mappers;
 
 @Mapper
@@ -26,6 +27,7 @@ public interface PlayerMapper {
 
     PlayerForTeamPresentationDTO toPlayerForTeamPresentationDTO(Player player);
 
+    @Named("mapPlayerStatsToDTO")
     default PlayerStatsForPlayerDetailsDTO mapPlayerStatsToDTO(PlayerStats playerStats) {
         if (playerStats == null) {
             return null; // Handle null playerStats
@@ -41,6 +43,7 @@ public interface PlayerMapper {
                 .build();
     }
 
+    @Named("toTeamSummaryForPlayerDTO")
     default TeamSummaryForPlayerDTO toTeamSummaryForPlayerDTO(Team team) {
         if (team == null) {
             return null; // Handle null team

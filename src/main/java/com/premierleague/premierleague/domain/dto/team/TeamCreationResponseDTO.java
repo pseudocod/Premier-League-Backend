@@ -9,7 +9,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class TeamCreateDTO {
+public class TeamCreationResponseDTO {
+    private Long id;
     private String name;
     private String stadium;
     private String city;

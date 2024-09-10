@@ -28,7 +28,7 @@ public class TeamStats {
     private Integer yellowCards;
     private Integer redCards;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "team_id", referencedColumnName = "id")
+    @OneToOne
+    @JoinColumn(name = "team_id", referencedColumnName = "id", nullable = false)
     private Team team; // Team who has these stats
 }

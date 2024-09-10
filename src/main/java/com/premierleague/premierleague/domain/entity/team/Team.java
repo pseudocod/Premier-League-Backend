@@ -25,15 +25,15 @@ public class Team {
     private String city;
     @Column(nullable = false)
     private String country;
-    @Column(nullable = false)
+    @Column(nullable = false, length = 500)
     private String logoUrl;
     @Column(nullable = false)
     private String websiteUrl;
-    @Column(nullable = false)
+    @Column(nullable = false, length = 2000)
     private String description;
-    @Column(nullable = false)
+    @Column(nullable = false, length = 500)
     private String coachName;
-    @Column(nullable = false)
+    @Column(nullable = false, length = 2000)
     private String history;
     @Column(nullable = false)
     private Integer foundedYear;
@@ -42,7 +42,7 @@ public class Team {
     @OneToMany(mappedBy = "team", fetch = FetchType.LAZY)
     private List<Player> players;
 
-    @OneToOne(mappedBy = "team", fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = "team", cascade = CascadeType.ALL, orphanRemoval = true)
     private TeamStats teamStats;
 
     @OneToMany(mappedBy = "homeTeam")
